@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mvform</title>
+    <link rel="stylesheet" href="../src/mvform.css">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/mvevent/mvevent.js"></script>
+    <script src="../mvform.js"></script>
+</head>
+<body style="margin: 100px">
+<div class="container">
+    <form class="form-horizontal" id="admin_form">
+        <div class="panel-main">
+            <div class="form-group">
+                <div class="col-xs-6">
+                    <label class="control-label required" for="name">姓名</label>
+                    <input required maxlength="10" minlength="2" type="text" class="form-control" id="name"
+                           placeholder="请输入姓名">
+                </div>
+                <div class="col-xs-6">
+                    <label class="control-label required" for="age">年龄</label>
+                    <input required min="18" max="45" type="text" class="form-control" id="age" placeholder="请输入年龄">
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="right" style="margin: 10px 0">
+        <button type="button" id="save" class="btn btn-primary">保存</button>
+    </div>
+    <div id="result">
+
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#save').click(function () {
+            var mv = Object.create(MvForm);
+            mv.setup($('#name'), {showError: true});
+            var result = mv.validate();
+            $('#result').empty().append($('<p>').text('input验证结果:' + (result ? '通过' : '失败')));
+            showResult(mv);
+        })
+    });
+
+    function showResult(mv) {
+        if (MvForm.isPrototypeOf(mv)) {
+            var errors = mv.errors;
+            for (var i = 0, j = errors.length; i < j; i++) {
+                $('#result').append($('<p>').text('元素ID：' + errors[i].id + '；错误消息：' + errors[i].msg))
+            }
+        }
+    }
+</script>
+</body>
+</html>

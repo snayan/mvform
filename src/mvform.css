@@ -1,0 +1,11 @@
+span.mvform-invalidate-msg {
+    margin-left: 10px;
+    color: #e64f4f;
+    font-weight: normal;
+    text-overflow: ellipsis;
+    font-size: 12px;
+}
+
+.mvform-invalidate {
+    border: 1px solid #e64f4f !important;
+}

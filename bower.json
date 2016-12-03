@@ -1,0 +1,26 @@
+{
+  "name": "mvform",
+  "description": "a lightweight form validator",
+  "main": "mvform.js",
+  "authors": [
+    "snayan"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "form",
+    "validate",
+    "validator"
+  ],
+  "homepage": "https://github.com/snayan/mvform",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "mvevent": "^1.0.1",
+    "jquery": "^3.1.1"
+  }
+}
