@@ -21,7 +21,7 @@
             this.$el = el instanceof $ ? el : $(el);
             if (!el || !el.length) {
                 console.warn('init failed because of el can not be found.');
-                throw Error('init failed because of el can not be found.');
+                throw new Error('init failed because of el can not be found.');
             }
             var tagName = this.$el.get(0).tagName;
             tagName = String.prototype.toUpperCase.call(tagName);
@@ -37,7 +37,7 @@
                 this.$textareas = this.$el.find('textarea');
             } else {
                 console.warn('init failed because of el is invalid.');
-                throw Error('init failed because of el is invalid');
+                throw new Error('init failed because of el is invalid');
             }
             this.errors = [];
             this.showError = options.showError;
