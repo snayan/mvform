@@ -35,6 +35,9 @@
             } else if (tagName === 'FORM') {
                 this.$inputs = this.$el.find('input');
                 this.$textareas = this.$el.find('textarea');
+            } else {
+                console.warn('init failed because of el is invalid.');
+                throw Error('init failed because of el is invalid');
             }
             this.errors = [];
             this.showError = options.showError;
