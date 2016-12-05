@@ -39,7 +39,7 @@ More examlpes to see `/examples` directory,introducing four way to use `mvform`.
 * [base form validation](https://github.com/snayan/mvform/blob/master/examples/01_base.html)
 * [define your own error message](https://github.com/snayan/mvform/blob/master/examples/02_your-msg.html)
 * [define your own error container element](https://github.com/snayan/mvform/blob/master/examples/03_your-error-container.html)
-* [ single element validaton](https://github.com/snayan/mvform/blob/master/examples/04_validate-an-input.html)
+* [single element validation](https://github.com/snayan/mvform/blob/master/examples/04_validate-an-input.html)
 
 ## Other
 I use the [bootstrap](http://getbootstrap.com/) as css framwork.The form is horizontal,the error message will append to the label.So,[bootstrap](http://getbootstrap.com/) is the best choice to use with `mvform`.You can use `mvform` just as form validation ,then writing your own css style based on the `mvform` css style,which jsut define the error message style,see `/src/mvform.css`. 
